@@ -5,7 +5,7 @@ import java.awt.Color;
 /*
  * Goal: See how the static keyword changes the objects
  * 
- * Member variable vs Class variable:
+ * Member variable versus Class variable:
  * 1. Run the program and move the sliders.
  *    Notice that changing the radius or color of one of the sliders only
  *    affects one of the circles.
@@ -24,7 +24,7 @@ import java.awt.Color;
  *    - A variable in a class with static is called a class variable.
  *    - A variable in a class without static is called a member variable
  * 
- * Lifetime of member variables vs. class variables
+ * Lifetime of member variables versus. class variables
  * 4. Add the following 2 lines of code at the top of the addCircles() method,
  *    before the circle objects are created:
  *      System.out.println("circle radius = " + Circle.radius);
@@ -60,7 +60,7 @@ import java.awt.Color;
  *    member variables inside the static addCircles() method.
  */
 public class StaticKeywordDemo {
-    Canvas canvas;
+    static Canvas canvas;
     
     StaticKeywordDemo() {
         canvas = new Canvas();
@@ -77,8 +77,8 @@ public class StaticKeywordDemo {
         System.out.println("circle radius = " + circle1.radius);
    	 System.out.println("circle color = " + circle1.color);
         
-        static canvas.addCircle(circle1);
-        static canvas.addCircle(circle2);
-        static canvas.addCircle(circle3);
+         canvas.addCircle(circle1);
+         canvas.addCircle(circle2);
+         canvas.addCircle(circle3);
     }
 }
